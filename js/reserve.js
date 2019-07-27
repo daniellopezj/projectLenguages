@@ -61,18 +61,20 @@ var Operator = {
 }
 
 var typesData = {
-    "string": "Es una cadena",
+    "String": "Es una cadena",
     "int": "es un numero entero",
     "double": "es un numero decimal",
     "float": "es un numero flotante",
     "char": "Es un caracter",
 }
 
-const string = new RegExp(/((string)\s([a-zA-Z0-9]*)(\s?=\s?"[a-zA-Z\s]*")?\s?;)/);
-const number = new RegExp(/((int|double|float)\s([a-zA-Z0-9]*)(\s?=\s?[0-9]*)?\s?;)/);
-const character = new RegExp(/((char)\s([a-zA-Z0-9]*)(\s?=\s?"[a-zA-Z\s]")?\s?;)/);
-const For = new RegExp(/(for)?\s?\(((int)\s[a-z]+\s?(=)\s?[0-9]+(;)\s?[a-z]+\s?(>|<|>=|<=|==|!=)\s?[0-9]+(;)\s?[a-z]+(\+\+|\-\-)\))[)]?\s?\{/);
-const While = new RegExp(/(while)\s?[(]([a-z]*?\s?(>|<|>=|<=|==|!=)?\s?[a-zA-Z0-9]*)[)]?\s?\{/);
+const string = new RegExp(/((String)\s([a-zA-Z0-9]*)(\s*=\s*"[a-zA-Z\s]*")?\s*;)/);
+const number = new RegExp(`((int|double|float)\\s([a-zA-Z0-9]*)(\\s*=\\s*[0-9]*)?\\s*;)`);
+const character = new RegExp(/((char)\s([a-zA-Z0-9]*)(\s*=\s*"[a-zA-Z\s]")?\s*;)/);
+const For = new RegExp(/(for)\s*\(((int)\s+[a-z]+\s*(=)\s*[0-9]+(;)\s*[a-z]+\s*(>|<|>=|<=|==|!=)\s*[0-9]+(;)\s*[a-z]+(\+\+|\-\-)\))\s*\{/);
+const While = new RegExp(/(while)\s*[(]([a-z]*?\s*(>|<|>=|<=|==|!=)?\s*[a-zA-Z0-9]*)[)]?\s*\{/);
+const If = new RegExp(/(if)\s*[(](\s*[a-zA-Z0-9]*\s*(>|<|>=|<=|==|!=)\s*[a-zA-Z0-9]*\s*)[)]\s*\{/);
+const derecho = new RegExp(/\}/);
 
 const variable = new RegExp(/((char)\s([a-zA-Z0-9]*)(\s?=\s?"[a-zA-Z\s]")?\s?;)/);
 
